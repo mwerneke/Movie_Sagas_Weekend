@@ -3,10 +3,34 @@ const router = express.Router();
 const pool = require('../modules/pool')
 
 router.get('/', (req, res) => {
+  console.log('movie GET');
 
   const query = `SELECT * FROM movies ORDER BY "title" ASC`;
   pool.query(query)
     .then( result => {
+      console.log('movie GET', result.rows);
+      res.send(result.rows);
+    })
+    .catch(err => {
+      console.log('ERROR: Get all movies', err);
+      res.sendStatus(500)
+    })
+
+});// END GET
+
+router.get('/:id', (req, res) => {
+  console.log('movie Details GET');
+
+  const query = `SELECT  "movies".poster as movieimage, ARRAY_AGG( "genres".name) as moviegenres, "movies".description as movieDescription FROM "movies_genres"
+  JOIN "movies" ON "movies".id = "movies_genres".movie_id
+  JOIN "genres" ON "genres".id = "movies_genres".genre_id
+  WHERE "movies".id =$1
+  GROUP BY movieDescription, movieimage;`;
+  const sqlParams=[req.params.id]
+
+  pool.query(query,sqlParams)
+    .then( result => {
+      console.log('movie Details GET', result.rows);
       res.send(result.rows);
     })
     .catch(err => {
@@ -15,6 +39,9 @@ router.get('/', (req, res) => {
     })
 
 });
+
+
+
 
 router.post('/', (req, res) => {
   console.log(req.body);
