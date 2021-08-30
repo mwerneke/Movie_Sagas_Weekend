@@ -33,3 +33,4 @@ This should show:
 The Add Movie page should have the buttons:
 [x]`Cancel` button, which should bring the user to the Home/List Page
 [x]`Save` button, which should save these inputs in the database and bring the user to the Home/List Page (which now has the new movie)
+[X]reviewj

@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import { useHistory } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
+
+
 
 function MovieList() {
 
@@ -38,15 +41,17 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
-            <button onClick={handleAdd}>Add a Movie</button>
+            <h1 className="title">Featured Movie List</h1>
+            <Button variant="contained" color="secondary" onClick={handleAdd}>Add a Movie</Button>
             {/* Goes through movies */}
             <section className="movies">
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
+                            <div className="style">
                             <h3>{movie.title}</h3>
-                            <img onClick={event => seeDetails(movie.id)} src={movie.poster} alt={movie.title} />
+                            <img className="img" onClick={event => seeDetails(movie.id)} src={movie.poster} alt={movie.title} />
+                            </div>
                         </div>
                     );
                 })}

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import './Details.css';
 
 function Details() {
     const history = useHistory();
@@ -25,23 +27,23 @@ function Details() {
         <>
            
 
-            <h2>Details:</h2>
-           <ul>
+            <h2 className="title">Movie Details:</h2>
+           
                 {movieDetail.map(movie => {
                     return (
                         <li key={movie.id}>
                             
                             <img src ={movie.movieimage}/>
-                            <h2>{movie.moviegenres}</h2>
-                            <h3>{movie.moviedescription}</h3>
+                            <h2 className= "genre">{movie.moviegenres}</h2>
+                            <h3 className="desc">{movie.moviedescription}</h3>
                         </li>
                     );
                 })}
-            </ul>
+            
 
 
          
-            <button onClick={handleBack}>Back to List</button>
+            <Button variant="contained" color="secondary" onClick={handleBack}>Back to List</Button>
         </>
     )
 }

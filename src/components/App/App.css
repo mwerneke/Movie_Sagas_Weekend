@@ -1,10 +1,22 @@
 .App {
   text-align: center;
-  background-color: rgb(43, 78, 131);
+  background-color: rgb(227, 74, 58);
   color:white;
   
 }
 
+
+.head{
+  
+  text-align: center;
+  Font-Family: 'Oxygen', Sans-Serif;
+  Font-Size: 30px;
+  padding: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgb(205, 27, 27);
+}
 
 .App-header {
   background-color: rgb(247, 245, 245);
@@ -21,7 +33,19 @@
   font-size: large;
 }
 
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.footer{
+  Font-Family: 'Noto Serif', Serif;
+  Font-Size: 16px;
+  margin:20px
+}
+/* Font-Family: 'Oxygen', Sans-Serif;
+Font-Size: 46px;
+Font-Family: 'Noto Serif', Serif;
+Font-Size: 16px; */

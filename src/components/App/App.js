@@ -7,7 +7,9 @@ import AddMovie from '../AddMovie/AddMovie';
 function App() {
   return (
     <div className="App">
+      <div className='head'>
       <h1>Weekend Movie Saga</h1>
+      </div>
       <Router>        
         <Route path="/" exact>
           <MovieList />
@@ -22,6 +24,7 @@ function App() {
 
         {/* Add Movie page */}
       </Router>
+      <footer className="footer"> © MW 2021</footer>
     </div>
   );
 }

@@ -1,11 +1,25 @@
 .movies {
-    display : flex;
+    
     flex-wrap: wrap;
     font-size: 12px;
     padding-left: 5px;
     padding-right: 5px;
+    Font-Family: 'Noto Serif', Serif;
+    Font-Size: 15px;
+    word-wrap: break-word;
+    
 }
 .img{
     height: 272px;
     width: 185px;
+    border: 10px black;
+}
+.title{
+    Font-Family: 'Noto Serif', Serif;
+    Font-Size: 25px;
+
+}
+.style{
+border: 20 px black;
+
 }

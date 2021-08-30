@@ -3,6 +3,7 @@ import {useDispatch} from 'react-redux'
 import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import './AddMovie.css';
+import Button from '@material-ui/core/Button';
 
 function AddMovie() {
 
@@ -84,12 +85,14 @@ const handleBackBtn =()=>{   //Sends user Back to MovieList (Main)
                     <option value="13">Superhero</option>
                     </select>
                     <br/>
-                <button className="cacel" onClick={handleCancel} type= "submit">Cancel</button>
+                <Button variant="contained" color="secondary" className="cancel" onClick={handleCancel} type= "submit">Cancel</Button>
                 <br/>
-                <button className="add" type="submit">Add Movie</button>
+                <br/>
+                <Button variant="contained" color="secondary" className="add" type="submit">Add Movie</Button>
                 {/* <button onClick={handleBackBtn}/> */}
              </form>
-             <button className= "return" onClick={handleBackBtn}>Return to Movies</button>
+             <br/>
+             <Button variant="contained" color="secondary" className= "return" onClick={handleBackBtn}>Return to Movies</Button>
        </div>
     );
 }
