@@ -42,7 +42,7 @@ function MovieList() {
     return (
         <main>
             <h1 className="title">Featured Movie List</h1>
-            <h3 className="select"> Select movie image for movie description</h3>
+            <p className="select"> Select movie image for movie description</p>
             <Button variant="contained" color="secondary" onClick={handleAdd}>Add a Movie</Button>
             {/* Goes through movies */}
             <section className="movies">
