@@ -21,8 +21,8 @@ const postMovie =()=>{  //Runs the detail that are taken in form and delivers to
         payload: {
             title:title,
             description:description,
-            poster:url,
-            genre_id: genre
+            poster:url,   
+            genre_id: genre  //genre_id table column
         }    
     })
     history.push('/')

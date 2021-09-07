@@ -3,6 +3,7 @@ import './App.css';
 import MovieList from '../MovieList/MovieList'
 import Details from '../Details/Details';
 import AddMovie from '../AddMovie/AddMovie';
+import Mailer from '../Mailer/Mailer'
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
           <AddMovie />
         
         </Route>
-
+        <Route path="/mail" exact>
+        <Mailer/>
+        </Route>
         {/* Add Movie page */}
       </Router>
       <footer className="footer"> © MW 2021</footer>
