@@ -1,14 +1,13 @@
-.desc{
-    text-align: left;
-    Font-Family: 'Noto Serif', Serif;
-    Font-Size: 20px;
+.desc {
+  text-align: left;
+  font-family: "Noto Serif", Serif;
+  font-size: 20px;
 }
-.title{
-    Font-Family: 'Noto Serif', Serif;
-    Font-Size: 28px;
+.title {
+  font-family: "Noto Serif", Serif;
+  font-size: 28px;
 }
 .genre {
-    Font-Family: 'Noto Serif', Serif;
-    Font-Size: 24px;
-
+  font-family: "Noto Serif", Serif;
+  font-size: 24px;
 }

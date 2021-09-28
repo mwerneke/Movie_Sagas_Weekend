@@ -1,26 +1,26 @@
-.title{
- margin:10px;
- text-align: center;
+.title {
+  margin: 10px;
+  text-align: center;
 }
 
-.description{
-    margin:10px;
-    text-align: center;
+.description {
+  margin: 10px;
+  text-align: center;
 }
 
-.url{
-    margin:10px;
-    text-align: center;
+.url {
+  margin: 10px;
+  text-align: center;
 }
-.cancel{
-    margin:15px
+.cancel {
+  margin: 15px;
 }
-.add{
-    margin:15px
+.add {
+  margin: 15px;
 }
-.return{
-    margin:15px
+.return {
+  margin: 15px;
 }
-.dropdown{
-    margin:10px
+.dropdown {
+  margin: 10px;
 }

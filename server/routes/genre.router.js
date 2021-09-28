@@ -8,17 +8,15 @@ router.get("/", (req, res) => {
       JOIN "movies" ON "movies_genres".movie_id= "movies".id
       GROUP BY movies.title, genres.name;`;
 
-  pool.query(sqlParams)
+  pool
+    .query(sqlParams)
     .then((result) => {
-      res.send(result.rows);})
+      res.send(result.rows);
+    })
     .catch((error) => {
       console.log("genre Get error", error);
       res.sendStatus(500);
-    })
+    });
 });
 
-
-
-
-  module.exports = router;
-
+module.exports = router;
