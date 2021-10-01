@@ -1,0 +1,11 @@
+.text-editor {
+    
+   
+    width: 800px;
+    margin: 0 auto;
+  }
+  .ql-editor {
+    display: flex;
+    min-height: 100px;
+  }
+  
